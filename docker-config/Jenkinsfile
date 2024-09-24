@@ -1,12 +1,46 @@
-// SCRIPTED PIPELINE
-node {
-	stage('Build') {
-		echo "Build"
+// SCRIPTED PIPELINE 
+
+//node {
+//	stage('Build') {
+//		echo "Build"
+//	}
+//	stage('Test') {
+//		echo "Test"
+//	}
+//	stage('Integration Test') {
+//		echo "Integration Test"
+//	}
+//}
+
+// DECLARATIVE PIPELINE
+pipeline {
+	agent any
+	stage {
+		stage ('Build'){
+			steps {
+				echo "Build"
+			}
+		}
+		stage ('Test'){
+			steps {
+				echo "Test"
+			}
+		}
+		stage ('Integration Test'){
+			steps {
+				echo "Integration Test"
+			}
+		}
 	}
-	stage('Test') {
-		echo "Test"
-	}
-	stage('Integration Test') {
-		echo "Integration Test"
+	post {
+		always {
+			echo "This message shows you in every run."
+		}
+		success {
+			echo "All steps have finished successfuly."
+		}
+		failure {
+			echo "There is something wrong."
+		}
 	}
 }
