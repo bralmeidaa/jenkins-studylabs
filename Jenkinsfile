@@ -17,11 +17,13 @@ pipeline {
 //	agent { docker { image 'node:latest' } }
 //	agent { docker { image 'maven:3.6.3' } }
 	agent any
-
+	tools {
+        maven 'Maven_3.6.3' 
+    }
 	environment{
 		dockerHome = tool 'my-docker'
-		mavenHome = tool 'my-maven'
-		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+//		mavenHome = tool 'my-maven'
+		PATH = "$dockerHome/bin:$PATH"
 	}
 	stages {
 		stage ('Checkout'){
@@ -39,19 +41,19 @@ pipeline {
 		}
 		stage ('Compile'){
 			steps {	
-				sh 'mvn clean compile'
+				sh "mvn clean compile"
 			}
 		}
 		stage ('Test'){
 			steps {
 				echo "Test"
-				sh 'mvn test'
+				sh "mvn test"
 			}
 		}
 		stage ('Integration Test'){
 			steps {
 				echo "Integration Test"
-				mvn 'mvn failsafe:integration-test failsafe:verify'
+				sh "mvn failsafe:integration-test failsafe:verify"
 			}
 		}
 	}
