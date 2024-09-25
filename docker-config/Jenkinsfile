@@ -15,11 +15,19 @@
 // DECLARATIVE PIPELINE
 pipeline {
 //	agent { docker { image 'node:latest' } }
+//	agent { docker { image 'maven:3.6.3' } }
 	agent any
+
+	environment{
+		DockerHome = tool 'MyDocker'
+		MavenHome = tool 'MyMaven'
+		PATH = "$DockerHome/Bin:$MavenHome/Bin:$PATH"
+	}
 	stages {
 		stage ('Build'){
 			steps {
-				//sh 'node --version'
+				sh 'docker --version'
+				sh 'maven --version'
 				echo "Build"
 				echo "PATH - $PATH"
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
