@@ -1,9 +1,12 @@
 
 package com.in28minutes.microservices.currencyexchangeservice.cucumber;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.Before; // updated by bralmeidaa
+import io.cucumber.java.en.Given; // updated by bralmeidaa
+import io.cucumber.java.en.When; // updated by bralmeidaa
+import io.cucumber.java.en.Then; // updated by bralmeidaa
+import io.cucumber.junit.Cucumber; // updated by bralmeidaa
+import io.cucumber.junit.CucumberOptions; // updated by bralmeidaa
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
