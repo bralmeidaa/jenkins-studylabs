@@ -1,8 +1,8 @@
 package com.in28minutes.microservices.currencyexchangeservice.cucumber;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given; // updated by bralmeidaa
+import io.cucumber.java.en.When; // updated by bralmeidaa
+import io.cucumber.java.en.Then; // updated by bralmeidaa
 import org.junit.Assert;
 
 import com.in28minutes.microservices.currencyexchangeservice.HelloWorld;

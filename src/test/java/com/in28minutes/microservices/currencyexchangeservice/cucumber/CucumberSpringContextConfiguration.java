@@ -7,7 +7,8 @@ import org.springframework.test.context.ContextConfiguration;
 
 import com.in28minutes.microservices.currencyexchangeservice.CurrencyExchangeServiceApplicationH2;
 
-import cucumber.api.java.Before;
+import io.cucumber.spring.CucumberContextConfiguration; // updated by bralmeidaa
+import io.cucumber.java.Before; // updated by bralmeidaa
 
 @SpringBootTest(webEnvironment = WebEnvironment.DEFINED_PORT)
 @ContextConfiguration(classes = CurrencyExchangeServiceApplicationH2.class, loader = SpringBootContextLoader.class)
