@@ -70,7 +70,7 @@
 		</dependency>
 		<dependency>
 			<groupId>javax.activation</groupId>
-			<artifactId>activation</artifactId>
+			<artifactId>jakarta.activation-api</artifactId>
 			<version>1.2.2</version> <!-- added by bralmeidaa -->
 		</dependency>
 		<dependency>
