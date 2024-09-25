@@ -1,2 +1,2 @@
 #ignore a specfic extention
-.ps1
+*.ps1
