@@ -87,6 +87,11 @@
 			<artifactId>groovy</artifactId>
 			<version>3.0.9</version>
 		</dependency>
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.19</version> <!-- Update to a compatible version by bralmeidaa -->
+    	</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -109,13 +114,15 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>2.3.1</version>
+			<!--updated from 2.3.1 version by bralmeidaa-->
+			<version>7.12.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>2.3.1</version>
+			<!--updated from 2.3.1 version by bralmeidaa-->
+			<version>7.12.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
