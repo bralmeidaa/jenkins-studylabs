@@ -81,6 +81,7 @@
 			<artifactId>activation</artifactId>
 			<version>1.1.1</version>
 		</dependency>
+		<!--Added by bralmeidaa-->
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy</artifactId>
